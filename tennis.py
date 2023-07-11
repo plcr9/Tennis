@@ -52,6 +52,3 @@ class Game:
       self.score[player] = Game.points[
         Game.points.index(current_point) + 1
       ]
-      
-    ]
-
