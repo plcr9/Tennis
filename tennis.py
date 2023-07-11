@@ -79,7 +79,7 @@ class Game:
 
   def __repr__(self):
     return (
-      f"Game(set={self.set!r),"
+      f"Game(set={self.set!r},"
       f"game_number={self.game_number})"
     )
     
