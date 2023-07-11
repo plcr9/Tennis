@@ -1,4 +1,4 @@
-from tennis import Player, Match
+from tennis import Player, Match, Set, Game
 
 alcaraz = Player("Carlos Alcaraz", 2000)
 rune = Player("Holger Rune", 2000)
@@ -14,3 +14,18 @@ print(alcaraz.ranking_points)
 rune.update_ranking_points(1200)
 print(rune.name)
 print(rune.ranking_points)
+
+test_match = Match(Alcaraz, rune)
+test_set = Set(test_match)
+test_game = Game(test_set)
+
+print(test_game.score)
+test_game.score_point(alcaraz)
+print(test_game.score)
+
+test_game.score_point(alcaraz)
+print(test_game.score)
+
+test_game.score_point(rune)
+print(test_game.score)
+
