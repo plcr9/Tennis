@@ -36,7 +36,22 @@ class Game:
 
   def score_point(self, player: Player):
     current_point = self.score[player]
-    self.score[player] = Game.points[
-      Game.points.index(current_point) + 1
+    # Player who wins a point at deuce (40-40)
+    if self.score[player] == 40:
+      # Player on Advantage score (Ad)
+      if "Ad" in self.score.values():
+        for each_player in self.players:
+          self.score[each_player] = 40
+      elif list(self.score.values()) == [40, 40]:
+        self.score[player] = "Ad"
+      else:
+        self.score[player] = "Game"
+    elif self.score[player] == "Ad":
+      self.score[player] = "Game"
+    else:
+      self.score[player] = Game.points[
+        Game.points.index(current_point) + 1
+      ]
+      
     ]
 
