@@ -19,5 +19,5 @@ test_match = Match(alcaraz, rune)
 test_set = Set(test_match)
 test_game = Game(test_set)
 
-print(alcaraz)
-print(test_game)
+test_game.score_point(alcaraz)
+print(test_game.score)
