@@ -19,42 +19,5 @@ test_match = Match(alcaraz, rune)
 test_set = Set(test_match)
 test_game = Game(test_set)
 
-print(test_game.score)
-test_game.score_point(alcaraz)
-print(test_game.score)
-
-test_game.score_point(alcaraz)
-print(test_game.score)
-
-test_game.score_point(rune)
-print(test_game.score)
-
-test_game.score_point(rune)
-print(test_game.score)
-
-test_game.score_point(rune)
-print(test_game.score)
-
-test_game.score_point(alcaraz)
-print(test_game.score)
-
-test_game.score_point(alcaraz)
-print(test_game.score)
-
-test_game.score_point(rune)
-print(test_game.score)
-
-test_game.score_point(rune)
-print(test_game.score)
-
-test_game.score_point(alcaraz)
-print(test_game.score)
-
-test_game.score_point(alcaraz)
-print(test_game.score)
-
-test_game.score_point(alcaraz)
-print(test_game.score)
-
-
-
+print(alcaraz)
+print(test_game)
