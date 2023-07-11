@@ -33,8 +33,15 @@ class Game:
       self.players[0]: 0,
       self.players[1]: 0,
     }
+    self.winner = None
 
   def score_point(self, player: Player):
+    if self.winner:
+      print(
+        "Error: You tried to add a point to a completed game"
+      )
+      return
+    game_won = False
     current_point = self.score[player]
     # Player who wins a point at deuce (40-40)
     if self.score[player] == 40:
@@ -45,10 +52,14 @@ class Game:
       elif list(self.score.values()) == [40, 40]:
         self.score[player] = "Ad"
       else:
-        self.score[player] = "Game"
+        game_won = True
     elif self.score[player] == "Ad":
-      self.score[player] = "Game"
+      game_won = True
     else:
       self.score[player] = Game.points[
         Game.points.index(current_point) + 1
       ]
+
+    if game_won:
+      self.score[player] = "Game"
+      self.winner = player
