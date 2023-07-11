@@ -21,3 +21,6 @@ test_game = Game(test_set)
 
 print(test_game)
 print(repr(test_game))
+
+print(f"{nadal}")
+print(f"{nadal!r}")
