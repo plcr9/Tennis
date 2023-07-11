@@ -15,7 +15,7 @@ rune.update_ranking_points(1200)
 print(rune.name)
 print(rune.ranking_points)
 
-test_match = Match(Alcaraz, rune)
+test_match = Match(alcaraz, rune)
 test_set = Set(test_match)
 test_game = Game(test_set)
 
