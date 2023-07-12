@@ -67,6 +67,10 @@ class Set(Unit):
       game.score_point(self.players[point_winner_idx])
       print(game)
 
+    self.score[game.winner] += 1
+    print(f"\nGame {game.winner.name}")
+    print(f"\nCurrent score: {self}")
+
 class Game(Unit):
   points = 0, 15, 30, 40, "Ad"
   
