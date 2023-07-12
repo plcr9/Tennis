@@ -57,6 +57,12 @@ class Match(Unit):
     if self.score[set_winner] == self.sets_to_play // 2 + 1:
       self.winner = set_winner
 
+  def play_match(self):
+    while self.is_running():
+      self.play_set()
+    print(f"\nWinner: {self.winner}")
+    print(f"Score: {self}")
+
   def __str__(self):
     return " ".join([str(set) for set in self.sets])
 
