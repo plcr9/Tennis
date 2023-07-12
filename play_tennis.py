@@ -5,17 +5,4 @@ rune = Player("Holger Rune", 2000)
 
 test_match = Match(alcaraz,rune)
 
-while test_match.is_running():
-  test_match.play_set()
-
-print(alcaraz.name)
-print(alcaraz.ranking_points)
-print(rune.name)
-print(rune.ranking_points)
-
-alcaraz.update_ranking_points(2000)
-print(alcaraz.name)
-print(alcaraz.ranking_points)
-rune.update_ranking_points(1200)
-print(rune.name)
-print(rune.ranking_points)
+test_match.play_match()
