@@ -54,7 +54,7 @@ class Match(Unit):
     set_winner = set.get_winner()
     self.score[set_winner] += 1
 
-    if self.score[set_winner] == set.sets_to_play // 2 + 1:
+    if self.score[set_winner] == self.sets_to_play // 2 + 1:
       self.winner = set_winner
 
 class Set(Unit):
