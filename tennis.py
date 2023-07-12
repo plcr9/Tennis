@@ -77,13 +77,13 @@ class Set(Unit):
     ):
       return
     if list(self.score.values()) == [6, 6]:
-    for player in self.players:
-      if self.score[player] == 7:
-        self.winner = player
-        return
-      if self.score[player] == 6:
-        if 5 not in self.score.values():
+      for player in self.players:
+        if self.score[player] == 7:
           self.winner = player
+          return
+        if self.score[player] == 6:
+          if 5 not in self.score.values():
+            self.winner = player
 
   def __str__(self):
     return "-".join(
