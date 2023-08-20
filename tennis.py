@@ -94,12 +94,16 @@ class Set(Unit):
       f"Press 2 for {self.players[1]}"
     )
     while game.is_running():
-      point_winner_idx = (
-        int(input("\nPoint Winner (1 or 2) -> ")) - 1
-      )
-      game.score_point(self.players[point_winner_idx])
-      print(game)
-
+        try:
+          point_winner_idx = (
+            int(input("\nPoint Winner (1 or 2) -> ")) - 1
+          )
+          game.score_point(self.players[point_winner_idx])
+          print(game)
+        except:
+          print("Invalid entry. Please enter either 1 or 2.")
+          continue
+          
     self.score[game.winner] += 1
     print(f"\nGame {game.winner.name}")
     print(f"\nCurrent score: {self.match}")
