@@ -2,6 +2,8 @@
 
 The TennisMatch app is designed to follow the format of a best of 5 set tennis match between two players (Carlos Alcaraz and Holger Rune). Users manually input each point of each game for either Player 1 or Player 2 to determine which player wins the point and ultimately who wins each game, each set and the entire match. There is the additional feature to settle a set on a tie-break should the two players make it to 6 games all in a given set.
 
+Upon completion of the match, the ranking points of the match winner are updated by 1,000.
+
 ## How the app was built
 
 The app was built using Python 3.10.
