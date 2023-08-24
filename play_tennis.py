@@ -10,3 +10,10 @@ test_match.play_match()
 test_match.winner.update_ranking_points(1000)
 
 print(f"The match winner is: {test_match.winner} and their updated ranking points: {test_match.winner.ranking_points}")
+
+update_rank = [
+    f"{alcaraz!r}",
+    f"{rune!r}"
+]
+print(sorted(update_rank))
+
